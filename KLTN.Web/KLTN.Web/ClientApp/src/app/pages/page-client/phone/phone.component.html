@@ -1,0 +1,14 @@
+
+<div nz-row nzType="flex" nzAlign="middle" >
+    <div nz-col nzSpan="8" *ngFor="let item of products">
+        <div class="card">
+            <img [src]="item.logoId" alt="product" style="width:70%">
+            <h3>{{item.name}}</h3>
+            <p class="price">{{item.price | currency: 'VND'}}</p>
+            <button nz-button nzType="primary" (click)="addCart(item.id)">
+                <span>CHỌN MUA</span>
+            </button>
+        </div>
+    </div>
+</div>
+

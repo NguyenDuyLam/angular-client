@@ -1,0 +1,12 @@
+.context-menu {
+    border: 1px solid #ccc;
+    min-height: 100px;
+  }
+
+  .active {
+    color: red;
+  }
+
+  .folder-name {
+    margin-left: 4px;
+  }

@@ -1,0 +1,54 @@
+<form nz-form [formGroup]="promotionForm">
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mã khuyến mãi</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="code" />
+          <nz-form-explain *ngIf="showExplain('code', 'required')">
+            Vui lòng điền mã khuyến mãi
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Tên khuyến mãi</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="name" />
+          <nz-form-explain *ngIf="showExplain('name', 'required')">
+            Vui lòng điền Tên khuyến mãi
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">DisCount</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-input-group nzAddOnAfter="%">
+            <input nz-input nz-col formControlName="disCount" />
+          </nz-input-group>
+          <nz-form-explain *ngIf="showExplain('disCount', 'required')">
+            Vui lòng điền DisCount
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mô tả</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <textarea nz-input formControlName="description"></textarea>
+          <nz-form-explain *ngIf="showExplain('description', 'required')">
+            Vui lòng điền Mô tả
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>

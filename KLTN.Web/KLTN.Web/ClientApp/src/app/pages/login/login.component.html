@@ -1,0 +1,52 @@
+<div id="bg-login">
+  <div nz-row nzType="flex" nzAlign="middle">
+      <div nz-col nzSpan="8" nzOffset="9">
+          <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+            <h1 style="text-align: center; color: whitesmoke;">ĐĂNG NHẬP</h1>
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-input-group>
+                    <input type="text" nz-input formControlName="userName" placeholder="Username" />
+                    <nz-form-explain *ngIf="showExplain('userName', 'required')">
+                      Vui lòng điền Username
+                    </nz-form-explain>
+                  </nz-input-group>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-input-group>
+                    <input type="password" nz-input formControlName="password" placeholder="Password" />
+                    <nz-form-explain *ngIf="showExplain('password', 'required')">
+                      Vui lòng điền Password
+                    </nz-form-explain>
+                  </nz-input-group>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <button nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+                </nz-form-control>
+              </nz-form-item>
+          </form>
+      </div>
+      <!-- <div nz-col  nzOffset="9" >
+          <button nz-button [nzType]="'danger'" (click)="google()">
+            <i nz-icon nzType="google" nzTheme="outline" ></i>
+          </button>
+      </div>
+      <div  style="margin-left: 10px;">
+          <button nz-button [nzType]="'primary'" (click)="facebook()">
+              <i nz-icon nzType="facebook" nzTheme="outline" ></i>
+            </button>
+      </div>
+      <div nz-col nzSpan="2"  nzOffset="2" >
+          <a (click)="forgotPassword()">Quên mật khẩu?</a>
+      </div> -->
+      <br/>
+      <div nz-col nzSpan="8" nzOffset="9">
+          <a (click)="register()">Đăng ký</a>
+      </div>
+  </div>
+  
+</div>

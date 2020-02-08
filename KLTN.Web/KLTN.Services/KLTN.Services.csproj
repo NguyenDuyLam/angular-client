@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KLTN.Common\KLTN.Common.csproj" />
+    <ProjectReference Include="..\KLTN.Models\KLTN.Models.csproj" />
+    <ProjectReference Include="..\KLTN.ViewModels\KLTN.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

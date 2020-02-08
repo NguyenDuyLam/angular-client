@@ -1,0 +1,23 @@
+<div class="table"> 
+    <nz-table 
+    #rowSelectionTable
+    nzShowPagination
+    nzShowSizeChanger
+    [nzData]="billDetails"
+    >
+    <thead>
+      <tr>
+        <th th-default>Sản phẩm</th>
+        <th th-default>Số lượng</th>
+        <th th-default>Giá</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of rowSelectionTable.data">
+        <td *ngIf="data.productCode">{{data.productCode  + ' - ' + data.productName }}</td>
+        <td>{{data.amount}}</td>
+        <td>{{ data.priceTotal | currency: 'VND' }}</td>
+      </tr>
+    </tbody>
+    </nz-table>
+  </div>
