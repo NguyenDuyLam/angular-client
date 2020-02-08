@@ -800,11 +800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.FileProcessing\\KLTN.FileProcessing.csproj",
+      "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.FileProcessing\\KLTN.FileProcessing.csproj",
       "projectName": "KLTN.FileProcessing",
-      "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.FileProcessing\\KLTN.FileProcessing.csproj",
+      "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.FileProcessing\\KLTN.FileProcessing.csproj",
       "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.FileProcessing\\obj\\",
+      "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.FileProcessing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

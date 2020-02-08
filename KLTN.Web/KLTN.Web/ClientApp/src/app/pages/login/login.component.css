@@ -1,23 +1,38 @@
-.login-form {
-    max-width: 300px;
-    padding-top: 20px;
-    margin: 120px 0 0;
-  }
+/* .login-form {
+  max-width: 300px;
+  padding-top: 20px;
+  margin: 120px 0 0;
+}
 
-  .login-form-forgot {
-    float: right;
-  }
+.login-form-forgot {
+  float: right;
+}*/
 
-  .login-form-button {
-    width: 100%;
-  }
+.login-form-button {
+  width: 100%;
+} 
 
-  #bg-login {
-    background: url(/assets/images/login.png) no-repeat center center fixed; 
-    width: 100%;
-    height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+#form-main {
+  /* background: url(/assets/images/background.png) no-repeat center center fixed; */
+  background-color: #235390;
+  width: 100%;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.sizeH1 {
+  color: white;
+  font-size: -webkit-xxx-large;
+  font-family: din-round,sans-serif;
+}
+
+.imageEarth {
+  background: url(/assets/images/earth_2.jpg);
+    background-size: 360px;
+    height: 360px;
+    min-width: 360px;
+    width: 360px;
+}

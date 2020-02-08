@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
     constructor(
         private fb: FormBuilder,
-        private auth: AuthenticationService,
         private msg?: NzMessageService,
         private router?: Router,
 
@@ -30,41 +29,41 @@ export class LoginComponent implements OnInit {
             userName: [null, [Validators.required]],
             password: [null, [Validators.required]],
         });
-        var check = this.auth.isLogin();
-        if (check) {
-            if (this.auth.currentUser.role === Role.Administrator) {
-                this.router.navigate(['/admin']);
-            }
-            if (this.auth.currentUser.role === Role.Member) {
-                this.router.navigate(['/index']);
-            }
-        }
-        else {
-            this.router.navigate(['/login']);
-        }
+        // var check = this.auth.isLogin();
+        // if (check) {
+        //     if (this.auth.currentUser.role === Role.Administrator) {
+        //         this.router.navigate(['/admin']);
+        //     }
+        //     if (this.auth.currentUser.role === Role.Member) {
+        //         this.router.navigate(['/index']);
+        //     }
+        // }
+        // else {
+        //     this.router.navigate(['/login']);
+        // }
     }
 
   
 
     async submitForm() {
-        if (!this.validateForm.invalid) {
-            var res: any = await this.auth.login(this.validateForm.controls.userName.value, this.validateForm.controls.password.value);
+        // if (!this.validateForm.invalid) {
+        //     var res: any = await this.auth.login(this.validateForm.controls.userName.value, this.validateForm.controls.password.value);
             
-            if (res) {
-                if (this.auth.currentUser.role === Role.Administrator) {
-                    this.router.navigate(['/admin']);
-                }
-                if (this.auth.currentUser.role === Role.Member) {
-                    this.router.navigate(['/index']);
-                }
-            }
-            else {
-                this.msg.error('Đăng nhập thất bại');
-            }
-        }
-        else {
-            this.validateData(this.validateForm);
-        }
+        //     if (res) {
+        //         if (this.auth.currentUser.role === Role.Administrator) {
+        //             this.router.navigate(['/admin']);
+        //         }
+        //         if (this.auth.currentUser.role === Role.Member) {
+        //             this.router.navigate(['/index']);
+        //         }
+        //     }
+        //     else {
+        //         this.msg.error('Đăng nhập thất bại');
+        //     }
+        // }
+        // else {
+        //     this.validateData(this.validateForm);
+        // }
     }
 
     validateData(form: any) {

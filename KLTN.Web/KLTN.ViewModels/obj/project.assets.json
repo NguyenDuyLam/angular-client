@@ -6384,11 +6384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
+      "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
       "projectName": "KLTN.ViewModels",
-      "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
+      "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
       "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\obj\\",
+      "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6407,11 +6407,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
-              "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
+            "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+              "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
             },
-            "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
-              "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
+            "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
+              "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
             }
           }
         }

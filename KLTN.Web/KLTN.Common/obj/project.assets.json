@@ -4445,11 +4445,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
+      "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
       "projectName": "KLTN.Common",
-      "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
+      "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
       "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\obj\\",
+      "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

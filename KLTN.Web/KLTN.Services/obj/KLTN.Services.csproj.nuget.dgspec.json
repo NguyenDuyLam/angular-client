@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj": {}
+    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
+        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
         "projectName": "KLTN.Common",
-        "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
+        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
         "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\obj\\",
+        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
+    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
+        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
         "projectName": "KLTN.Models",
-        "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
+        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
         "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\obj\\",
+        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -111,8 +111,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
-                "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
+              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
               }
             }
           }
@@ -170,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj": {
+    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj",
+        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj",
         "projectName": "KLTN.Services",
-        "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj",
+        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Services\\KLTN.Services.csproj",
         "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Services\\obj\\",
+        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -196,14 +196,14 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
-                "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
+              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
               },
-              "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
-                "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
+              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
+                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
               },
-              "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj"
+              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {
+                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj"
               }
             }
           }
@@ -249,14 +249,14 @@
         }
       }
     },
-    "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {
+    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
+        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
         "projectName": "KLTN.ViewModels",
-        "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
+        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
         "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.ViewModels\\obj\\",
+        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -275,11 +275,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
-                "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
+              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
               },
-              "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
-                "projectPath": "C:\\Users\\ANH DAT\\Desktop\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
+              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
+                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
               }
             }
           }
