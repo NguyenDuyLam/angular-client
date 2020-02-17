@@ -5,6 +5,7 @@ import { NzMessageService } from 'ng-zorro-antd';
 import { Router } from '@angular/router';
 import StorageHelper from '../../services/common/storage-helper';
 import { Role } from '../../enum/role.enum';
+import { deepEqual } from 'assert';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
         private fb: FormBuilder,
         private msg?: NzMessageService,
         private router?: Router,
-
+        private auth?: AuthenticationService
     ) { }
 
     ngOnInit(): void {
@@ -46,24 +47,25 @@ export class LoginComponent implements OnInit {
   
 
     async submitForm() {
-        // if (!this.validateForm.invalid) {
-        //     var res: any = await this.auth.login(this.validateForm.controls.userName.value, this.validateForm.controls.password.value);
-            
-        //     if (res) {
-        //         if (this.auth.currentUser.role === Role.Administrator) {
-        //             this.router.navigate(['/admin']);
-        //         }
-        //         if (this.auth.currentUser.role === Role.Member) {
-        //             this.router.navigate(['/index']);
-        //         }
-        //     }
-        //     else {
-        //         this.msg.error('Đăng nhập thất bại');
-        //     }
-        // }
-        // else {
-        //     this.validateData(this.validateForm);
-        // }
+        if (!this.validateForm.invalid) {
+            var res: any = await this.auth.login(this.validateForm.controls.userName.value, this.validateForm.controls.password.value);
+            this.router.navigate(['/admin']);
+            //if (res.isSuccess) {
+            //    debugger
+            //    if (res.data.role === Role.Administrator) {
+                   
+            //    }
+            //    if (res.data.role === Role.Member) {
+            //        this.router.navigate(['/index']);
+            //    }
+            //}
+            //else {
+            //    this.msg.error('Đăng nhập thất bại');
+            //}
+        }
+        else {
+            this.validateData(this.validateForm);
+        }
     }
 
     validateData(form: any) {

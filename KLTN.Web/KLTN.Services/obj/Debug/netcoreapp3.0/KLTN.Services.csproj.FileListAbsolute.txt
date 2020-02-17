@@ -13,3 +13,18 @@ C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Com
 C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Models.pdb
 C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.ViewModels.pdb
 C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.csproj.CopyComplete
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Services.deps.json
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Services.dll
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Services.pdb
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Common.dll
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Models.dll
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.ViewModels.dll
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Common.pdb
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Models.pdb
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.ViewModels.pdb
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.csprojAssemblyReference.cache
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.AssemblyInfoInputs.cache
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.AssemblyInfo.cs
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.csproj.CopyComplete
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.dll
+D:\Work\Project\KLTN\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.pdb

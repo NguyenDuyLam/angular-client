@@ -24,19 +24,10 @@ namespace KLTN.Services.BO
             _uow = uow;
             _appSetting = appSetting.Value;
         }
-        public User GetUserByUserNameAndPasswordAsync(UserLoginViewModel data)
-        {
-            var userExist = _uow.GetRepository<User>().FindBy(x => x.UserName == data.UserName && x.Password == data.Password).SingleOrDefault();
-            if (userExist.Equals(null))
-            {
-                return null;
-            }
-            return userExist;
-        }
 
         public object Login(UserLoginViewModel data)
         {
-            var user = GetUserByUserNameAndPasswordAsync(data);
+            var user =  _uow.GetRepository<User>().FindBy(x => x.UserName == data.UserName && x.Password == data.Password).FirstOrDefault();
             if (user == null)
             {
                 return null;

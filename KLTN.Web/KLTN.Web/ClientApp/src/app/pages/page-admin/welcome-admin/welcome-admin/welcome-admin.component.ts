@@ -18,11 +18,11 @@ export class WelcomeAdminComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    var check = this.auth.isLogin();
-    if (!check) {
-      this.router.navigate(['/login']);
-    }
-    this.userName = this.auth.currentUser.name;
+    // var check = this.auth.isLogin();
+    // if (!check) {
+    //   this.router.navigate(['/login']);
+    // }
+    // this.userName = this.auth.currentUser.name;
   }
 
   logout() {

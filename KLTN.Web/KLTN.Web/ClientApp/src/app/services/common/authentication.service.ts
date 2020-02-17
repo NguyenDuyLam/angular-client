@@ -75,7 +75,7 @@ export class AuthenticationService {
         const options = new RequestOptions({ headers: headers });
         let model = JSON.stringify({ Username: username, Password: password });
         try {
-            const res: any = await this.http.post("/api/AuthUser/Login", model, options).toPromise();
+            const res: any = await this.http.post("/api/User/Login", model, options).toPromise();
             const result = res.json();
             if (result) {
                 this.currentUser.role = result.role;

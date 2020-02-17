@@ -10,7 +10,6 @@ namespace KLTN.Services.Interfaces
     public interface IUserServices
     {
         object Login(UserLoginViewModel data);
-        User GetUserByUserNameAndPasswordAsync(UserLoginViewModel data);
 
     }
 }
