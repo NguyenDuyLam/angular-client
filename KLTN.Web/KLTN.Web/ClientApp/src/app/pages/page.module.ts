@@ -32,7 +32,6 @@ import { PhoneComponent } from './page-client/phone/phone.component';
 import { CartComponent } from './page-client/cart/cart.component';
 import { PayComponent } from './page-client/pay/pay.component';
 import { RegisterComponent } from './register/register.component';
-import { QuizPmComponent } from './quizPm/quiz-pm/quiz-pm.component';
 
 
 
@@ -63,7 +62,6 @@ import { QuizPmComponent } from './quizPm/quiz-pm/quiz-pm.component';
     PayComponent,
     BillListComponent,
     RegisterComponent,
-    QuizPmComponent
   ],
   imports: [
     BrowserModule,

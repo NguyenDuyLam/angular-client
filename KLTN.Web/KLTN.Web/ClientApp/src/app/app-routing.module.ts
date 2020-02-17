@@ -16,11 +16,9 @@ import { CartComponent } from './pages/page-client/cart/cart.component';
 import { PayComponent } from './pages/page-client/pay/pay.component';
 import { BillListComponent } from './pages/page-admin/bills/bill-list/bill-list.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { QuizPmComponent } from './pages/quizPm/quiz-pm/quiz-pm.component';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/login' },
-    { path: 'quiz', component: QuizPmComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     //admin

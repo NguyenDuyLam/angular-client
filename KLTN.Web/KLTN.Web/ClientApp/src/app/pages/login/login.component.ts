@@ -49,19 +49,18 @@ export class LoginComponent implements OnInit {
     async submitForm() {
         if (!this.validateForm.invalid) {
             var res: any = await this.auth.login(this.validateForm.controls.userName.value, this.validateForm.controls.password.value);
-            this.router.navigate(['/admin']);
-            //if (res.isSuccess) {
-            //    debugger
-            //    if (res.data.role === Role.Administrator) {
+            if (res.isSuccess) {
+               debugger
+               if (res.data.role === Role.Administrator) {
                    
-            //    }
-            //    if (res.data.role === Role.Member) {
-            //        this.router.navigate(['/index']);
-            //    }
-            //}
-            //else {
-            //    this.msg.error('Đăng nhập thất bại');
-            //}
+               }
+               if (res.data.role === Role.Member) {
+                   this.router.navigate(['/index']);
+               }
+            }
+            else {
+               this.msg.error('Đăng nhập thất bại');
+            }
         }
         else {
             this.validateData(this.validateForm);
