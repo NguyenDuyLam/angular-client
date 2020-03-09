@@ -1,0 +1,8 @@
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\bin\Debug\netcoreapp3.0\KLTN.Common.deps.json
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\bin\Debug\netcoreapp3.0\KLTN.Common.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\bin\Debug\netcoreapp3.0\KLTN.Common.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\obj\Debug\netcoreapp3.0\KLTN.Common.AssemblyInfoInputs.cache
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\obj\Debug\netcoreapp3.0\KLTN.Common.AssemblyInfo.cs
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\obj\Debug\netcoreapp3.0\KLTN.Common.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\obj\Debug\netcoreapp3.0\KLTN.Common.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Common\obj\Debug\netcoreapp3.0\KLTN.Common.csprojAssemblyReference.cache

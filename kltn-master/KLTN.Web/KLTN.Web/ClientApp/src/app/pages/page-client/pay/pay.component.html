@@ -1,0 +1,115 @@
+<nz-layout>
+    <nz-header>
+      <div class="logo"></div>
+      <div >
+        
+      </div>
+    </nz-header>
+    <nz-layout>
+      <nz-layout class="inner-layout">
+        <nz-steps [nzCurrent]="current" nzSize="default" style="margin-top: 50px; margin-left: 50px;margin-right: 50px;">
+            <nz-step nzTitle="Địa Chỉ Giao Hàng"></nz-step>
+            <nz-step nzTitle="Thanh Toán & Đặt Mua"></nz-step>
+            <nz-step nzTitle="Thành Công"></nz-step>
+          </nz-steps>
+      </nz-layout>
+      <br/>
+      <nz-layout style="background-color: white;">
+          <div *ngIf="current==0">
+            <br/>
+            <div nz-row nzType="flex" nzAlign="middle">
+                <div nz-col nzSpan="18" nzOffset="5">
+                    <nz-descriptions nzTitle="Thông Tin Khách Hàng" nzBordered [nzSize]="default">
+                        <nz-descriptions-item nzTitle="Họ Tên">{{user?.fullname}}</nz-descriptions-item>
+                        <br/>
+                        <nz-descriptions-item nzTitle="Số Điện Thoại">{{user?.phoneNumber}}</nz-descriptions-item>
+                        <br/>
+                        <nz-descriptions-item nzTitle="Email">{{user?.email}}</nz-descriptions-item>
+                        <br/>
+                        <nz-descriptions-item nzTitle="Địa Chỉ">{{ user?.address }}
+                            <span *ngIf="user?.districtName"> {{ ', ' + user?.districtName }}</span> 
+                            <span *ngIf="user?.provinceName"> {{ ', ' + user?.provinceName }}</span>
+                        </nz-descriptions-item>
+                    </nz-descriptions>
+                </div>
+            </div>
+            <br/>
+            <div nz-row nzType="flex" nzAlign="end">
+                <div nz-col nzSpan="3" nzOffset="3" style="margin-right: 100px;" >
+                    <button nzSize="large" nz-button nzType="primary" (click)="nextStep()">
+                      Giao Đến Địa Chỉ Này
+                    </button>
+                  </div>
+            </div>
+          </div>
+          <!-- nhánh 2 -->
+          <div *ngIf="current==1">
+            <div nz-col nzSpan="18" nzOffset="5">
+                <nz-descriptions nzTitle="Thông Tin Khách Hàng" nzBordered [nzSize]="default">
+                    <nz-descriptions-item nzTitle="Họ Tên">{{user.fullname}}</nz-descriptions-item>
+                    <br/>
+                    <nz-descriptions-item nzTitle="Số Điện Thoại">{{user.phoneNumber}}</nz-descriptions-item>
+                    <br/>
+                    <nz-descriptions-item nzTitle="Email">{{user.email}}</nz-descriptions-item>
+                    <br/>
+                    <nz-descriptions-item nzTitle="Địa Chỉ">{{ user.address }}
+                        <span *ngIf="user.districtName"> {{ ', ' + user.districtName }}</span>
+                        <span *ngIf="user.provinceName"> {{ ', ' + user.provinceName }}</span></nz-descriptions-item>
+                </nz-descriptions>
+            </div>
+            <br/>
+            <div class="table" style="width: auto; background-color: white;"> 
+                <nz-table 
+                #rowSelectionTable
+                nzShowPagination
+                nzShowSizeChanger
+                [nzData]="carts"
+                >
+                <thead>
+                  <tr>
+                    <th th-default>Tên sản phẩm</th>
+                    <th th-default>số lượng</th>
+                    <th th-default>Giá</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of rowSelectionTable.data">
+                    <td>{{data.productName}}</td>
+                    <td>{{ data.amount }}</td>
+                    <td>{{ data.priceTotal | currency: 'VND'}}</td>
+                  </tr>
+                  <tr>
+                    <td style="background-color: cadetblue;"><h2>THÀNH TIỀN</h2></td>
+                    <td style="background-color: cadetblue;"></td>
+                    <td style="background-color: cadetblue;"><h2>{{total | currency: 'VND'}}</h2></td>
+                  </tr>
+                </tbody>
+                </nz-table>
+              </div>
+            <br/>
+            <div nz-row nzType="flex" nzAlign="end">
+              <div nz-col nzSpan="3" nzOffset="1">
+                <button nzSize="large" nz-button nzType="primary" (click)="AddBill()">
+                  <h3>Thanh Toán</h3>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- nhánh 3 -->
+          <div *ngIf="current==2">
+            <br/>
+            <div nz-row nzType="flex" nzAlign="middle">
+                <div nz-col nzSpan="8" nzOffset="8">
+                    <nz-result [nzIcon]="'smile-twotone'" [nzTitle]="'Đặt Hàng Thành Công'">
+                        <div nz-result-extra>
+                            <button nzSize="large" nz-button nzType="primary" (click)="backHome()">
+                                Quay Lại Trang Chủ 
+                              </button>
+                        </div>
+                      </nz-result>
+                </div>
+            </div>
+          </div>
+      </nz-layout>
+    </nz-layout>
+</nz-layout>

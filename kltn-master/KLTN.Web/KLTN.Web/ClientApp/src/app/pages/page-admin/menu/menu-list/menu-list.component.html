@@ -1,0 +1,102 @@
+<h2>Quản lý Menu</h2>
+
+<nz-spin nzTip="Đang tải..." [nzSpinning]="isLoading">
+    <div class="context-menu">
+      <p *ngIf="!isLoading && (!nodes || !nodes.length)">Không có dữ liệu</p>
+      <nz-tree #nzTreeComponent  [nzData]="nodes" (nzDblClick)="openFolder($event)" (nzClick)="activeNode($event)"
+               [nzCheckedKeys]="defaultCheckedKeys"
+               [nzExpandedKeys]="defaultExpandedKeys"
+               [nzSelectedKeys]="defaultSelectedKeys"
+               (nzCheckBoxChange)="nzCheck($event)"
+               (nzExpandChange)="nzCheck($event)">
+        <ng-template #nzTreeTemplate let-node>
+          <span class="custom-node" [class.active]="activedNode?.key === node.key">
+            <span *ngIf="!node.isLeaf">
+              <i nz-icon [type]="node.isExpanded ? 'folder-open' : 'folder'" (click)="openFolder(node)"></i>
+              <span class="folder-name" (click)="updateTable(node)">  {{ node.title }}</span>
+            </span>
+            <span *ngIf="node.isLeaf">
+              <i nz-icon [type]="'file'"></i>
+              <span class="file-name" (click)="updateTable(node)">  {{ node.title }}</span>
+            </span>
+          </span>
+        </ng-template>
+      </nz-tree>
+    </div>
+  </nz-spin>
+
+  <!-- <nz-tree [nzData]="nodes" nzDraggable nzBlockNode (nzOnDrop)="nzEvent($event)"> </nz-tree> -->
+
+  <br />
+
+  <div class="filter-area">
+
+    <div nz-row nzType="flex" nzAlign="middle">
+      <div nz-col nzSpan="3"><label>Từ khoá:</label></div>
+      <div nz-col nzSpan="6"><input #box type="text" nz-input placeholder="Nhập từ khóa" [(ngModel)]="tableInfo.keyWord" /></div>
+      <div nz-col nzSpan="2" nzOffset="1">
+        <button nz-button nzType="primary" (click)="search()">
+          <i class="anticon" nz-icon nzType="search"></i>Tìm
+        </button>
+      </div>
+    </div>
+  
+    <br />
+  
+    <div nz-row nzJustify="end" nzType="flex">
+      <div nz-col nzSpan="1">
+        <button nzSize="small" nz-button nzType="primary" (click)="edit(null)">
+          <i class="anticon anticon-plus"></i>Thêm
+        </button>
+  
+      </div>
+      <div nz-col nzSpan="2" nzOffset="1">
+        <button nzSize="small" nz-button nzType="primary" (click)="refresh()">
+          <i nz-icon nzType="sync" nzTheme="outline"></i>Refresh
+        </button>
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="p10"></div>
+
+  <div class="table"> 
+      <nz-table 
+      #rowSelectionTable
+      nzShowPagination
+      nzShowSizeChanger
+      [nzData]="dataTable"
+      >
+      <thead>
+        <tr>
+          <th th-default>Code</th>
+          <th th-default>Tên</th>
+          <th th-default>Cấp cha</th>
+          <th th-default>Người tạo</th>
+          <th th-default>Ngày tạo</th>
+          <th th-default>Người sửa</th>
+          <th th-default>Ngày sửa</th>
+          <th action nzRight="0px">Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of rowSelectionTable.data">
+          <td>{{data.code}}</td>
+          <td>{{data.name}}</td>
+          <td><span *ngIf="data.parentName">{{ data.parentCode  + ' - ' +  data.parentName}}</span></td>
+          <td>{{ data.createdBy }}</td>
+          <td>{{ data.created | date:'dd/MM/yyyy HH:mm' }}</td>
+          <td>{{ data.modifiedBy }}</td>
+          <td>{{ data.modified | date:'dd/MM/yyyy HH:mm' }}</td>
+          <td action nzRight="0px">
+            <a (click)="edit(data)">Sửa</a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a nz-popconfirm nzTitle="Bạn có chắc muốn xóa mục này?" nzOkText="Đồng ý"  nzCancelText="Hủy" (nzOnConfirm)="deleteRow(data.id)">Xoá</a>
+          </td>
+        </tr>
+      </tbody>
+      </nz-table>
+    </div>
+
+
