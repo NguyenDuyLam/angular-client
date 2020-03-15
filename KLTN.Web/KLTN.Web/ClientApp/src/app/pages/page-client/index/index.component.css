@@ -17,6 +17,8 @@
 
 .inner-layout {
   padding: 0 24px 24px;
+  margin-left: 120px;
+  margin-top: 30px;
 }
 
 nz-breadcrumb {
@@ -60,3 +62,11 @@ nz-content {
   opacity: 0.7;
 }
 
+.indexMenu {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.child-menu {
+  margin-left: 30px;
+}

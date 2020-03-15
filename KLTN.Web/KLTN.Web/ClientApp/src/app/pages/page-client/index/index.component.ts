@@ -44,8 +44,8 @@ export class IndexComponent implements OnInit {
     //   this.router.navigate(['/login']);
     // }
     this.userName = this.authenSv.currentUser.name;
-    this.getDataForTree();
-    this.getCart();
+    // this.getDataForTree();
+    // this.getCart();
   }
 
   async getDataForTree() {

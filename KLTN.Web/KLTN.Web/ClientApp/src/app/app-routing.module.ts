@@ -18,7 +18,7 @@ import { BillListComponent } from './pages/page-admin/bills/bill-list/bill-list.
 import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/login' },
+    { path: '', pathMatch: 'full', redirectTo: '/index' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     //admin
