@@ -1,66 +1,112 @@
 <nz-layout>
-    <nz-header>
-      <div class="logo"></div>
-      <div >
-        <div nz-col nzSpan="6" nzOffset="6"><input #box type="text" [(ngModel)]="selectProduct" nz-input placeholder="Tìm theo tên điện thoại, máy tính"  /></div>
-        <div nz-col nzSpan="2" nzOffset="0">
-          <button nz-button nzType="primary" (click)="search()">
-            <i class="anticon" nz-icon nzType="search"></i>
-          </button>
-        </div>
-        <a style="float:right; padding-right: 50px;" *ngIf="!userName" routerLink="/login">
-          <span style="color: white;">Login</span>
-        </a>
-        <div nz-col nzSpan="1" nzOffset="2" style="margin-top: 10px;"  *ngIf="userName">
-          <nz-badge  [(nzCount)]="authenSv.countCart">
-            <a routerLink="/index/cart">
-              <i nz-icon nzType="shopping-cart" style="font-size: 30px;" nzTheme="outline"></i>
-            </a>
-           </nz-badge>
-        </div>
-        <a style="float:right; padding-right: 50px;" nz-dropdown [nzDropdownMenu]="menu" *ngIf="userName">
-            <nz-avatar nzIcon="user"></nz-avatar><span style="color: white;">{{userName}}</span>
+  <nz-header>
+    <!-- <div class="logo"></div> -->
+    <div class="indexMenu">
+      <ul nz-menu nzMode="horizontal">
+        <li nz-menu-item nzSelected>
+          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/earth-icon-menu.png" [nzSize]="50"></nz-avatar>
+          NameApp
+        </li>
+        <li nz-menu-item nzSelected>
+          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/grammar-icon-menu.png" [nzSize]="50"></nz-avatar>
+          Ngữ Pháp
+        </li>
+        <li nz-menu-item nzSelected>
+          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/vocabulary-icon-menu.png" [nzSize]="50"></nz-avatar>
+          Từ Vựng
+        </li>
+        <li nz-menu-item nzSelected>
+          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/sword-icon-menu.png" [nzSize]="50"></nz-avatar>
+          Đấu Trường
+        </li>
+        <li nz-menu-item nzSelected>
+          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/store-icon-menu.png" [nzSize]="50"></nz-avatar>
+          Cửa Hàng
+        </li>
+        <li nz-menu-item nzSelected>
+          <a nz-dropdown [nzDropdownMenu]="store">
+            <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/vcoin-icon-menu.png" [nzSize]="50"></nz-avatar>
+            100
           </a>
-          <nz-dropdown-menu #menu="nzDropdownMenu" style="width: 100px;">
+          <nz-dropdown-menu #store="nzDropdownMenu">
             <ul nz-menu nzSelectable>
-              <li nz-menu-item (click)="logout()">Logout</li>
+              <li nz-menu-item>Cửa hàng</li>
             </ul>
           </nz-dropdown-menu>
+        </li>
+        <li nz-menu-item nzSelected>
+          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/pointTotal-icon-menu.png" [nzSize]="50"></nz-avatar>
+          500
+        </li>
+        <li nz-menu-item nzSelected>
+          <a nz-dropdown [nzDropdownMenu]="avatar">
+            <nz-avatar [nzSize]="50" nzSrc="/assets/images/avatar.png"></nz-avatar>
+          </a>
+          <nz-dropdown-menu #avatar="nzDropdownMenu">
+            <ul nz-menu nzSelectable>
+              <li nz-menu-item>Hồ Sơ Của Bạn</li>
+              <li nz-menu-item>Cài Đặt</li>
+              <li nz-menu-item>Đăng Xuất</li>
+            </ul>
+          </nz-dropdown-menu>
+        </li>
+      </ul>
+    </div>
+  </nz-header>
+  <nz-layout>
+    <nz-layout class="inner-layout">
+      <div nz-row nzType="flex" nzJustify="start">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-control [nzLg]="{span: 3, offset: 0}">
+              <nz-avatar [nzSize]="64" nzSrc="/assets/images/avatar.png"></nz-avatar>
+              <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/">
+                <button nz-button nzShape="circle" style="margin-left: -10px;"><i nz-icon nzType="edit" nzTheme="outline"></i></button>
+              </nz-upload>
+            </nz-form-control>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="padding-top: 10px;">
+              <h1>Dat Nguyen</h1>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
+              <nz-card style="width: 70%;" nzTitle="Tiếng Anh">
+                <h3  style="margin-top: -10px;">Tổng điểm KN: 900 KN</h3>
+              </nz-card>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
       </div>
-    </nz-header>
-    <nz-layout>
-      <nz-sider nzWidth="200px" nzTheme="light" >
-        <ul nz-menu nzMode="inline" class="sider-menu" >
-          <div *ngFor="let item of nodes">
-              <li nz-submenu nzOpen nzIcon="laptop" [nzTitle]="item.title">
-                  <ul>
-                      <li nz-menu-item *ngFor="let data of item.children">
-                          <a routerLink="/index/{{item.code}}/{{data.code}}">
-                            <i nz-icon nzType="laptop" nzTheme="outline"></i>
-                              <span>{{data.title}}</span>
-                          </a>
-                      </li>
-                  </ul>
-                </li>
-          </div>
-        </ul>
-      </nz-sider>
-      <nz-layout class="inner-layout">
-        <router-outlet *ngIf="productSv.disableProduct"></router-outlet>
-        <div *ngIf="!productSv.disableProduct">
-          <div nz-row nzType="flex" nzAlign="middle" >
-            <div nz-col nzSpan="6" *ngFor="let item of products">
-                <div class="card">
-                    <img [src]="item.logoId" alt="product" style="width:70%">
-                    <h3>{{item.name}}</h3>
-                    <p class="price">{{item.price | currency: 'VND'}}</p>
-                    <button nz-button nzType="primary" (click)="addCart(item.id)">
-                        <span>CHỌN MUA</span>
-                    </button>
+      <!-- Thành tích -->
+      <div nz-row nzType="flex" nzJustify="start">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-control [nzLg]="{span: 12, offset: 0}">
+              <h1>Thành Tích</h1>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div *ngFor="let item of achievements">
+        <div nz-row nzType="flex" nzJustify="start">
+          <div nz-col [nzSpan]="12">
+            <nz-form-item>
+              <nz-form-control [nzLg]="{span: 3, offset: 0}">
+                <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
+              </nz-form-control>
+              <nz-form-control [nzLg]="{span: 16, offset: 0}">
+                <h1 >{{item.name}}</h1>
+                <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
+                <div style="margin-top: -20px;">
+                  <nz-progress [nzPercent]="item.percent" nzStatus="active" ></nz-progress>
                 </div>
-            </div>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
         </div>
-        </div>
-      </nz-layout>
+      </div>
     </nz-layout>
   </nz-layout>
+</nz-layout>
