@@ -20,6 +20,22 @@ export class IndexComponent implements OnInit {
   menus: any[] = [];
   products: any[] = [];
 
+  achievements: any[] = [
+    {
+      code: 1,
+      name: "Lừa rừng",
+      descripte: "Đạt chuỗi 3 ngày",
+      image: "/assets/images/fire.png",
+      percent: 30
+    },
+    {
+      code: 2,
+      name: "Cao nhân",
+      descripte: "Đạt 1000 KN",
+      image: "/assets/images/fairy-man.png",
+      percent: 50
+    },
+  ];
   selectProduct = '';
 
   modelFilter_billdetail = {
@@ -46,6 +62,7 @@ export class IndexComponent implements OnInit {
     this.userName = this.authenSv.currentUser.name;
     // this.getDataForTree();
     // this.getCart();
+    console.log(this.achievements);
   }
 
   async getDataForTree() {

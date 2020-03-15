@@ -58,19 +58,53 @@
       <div nz-row nzType="flex" nzJustify="start">
         <div nz-col [nzSpan]="12">
           <nz-form-item>
-            <nz-form-label [nzLg]="{span: 3, offset: 0}">Mã tài khoản</nz-form-label>
-            <nz-form-control [nzLg]="{span: 16, offset: 0}">
-              <input nz-input  />
+            <nz-form-control [nzLg]="{span: 3, offset: 0}">
+              <nz-avatar [nzSize]="64" nzSrc="/assets/images/avatar.png"></nz-avatar>
+              <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/">
+                <button nz-button nzShape="circle" style="margin-left: -10px;"><i nz-icon nzType="edit" nzTheme="outline"></i></button>
+              </nz-upload>
+            </nz-form-control>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="padding-top: 10px;">
+              <h1>Dat Nguyen</h1>
             </nz-form-control>
           </nz-form-item>
         </div>
         <div nz-col [nzSpan]="12">
           <nz-form-item>
-            <nz-form-label [nzLg]="{span: 3, offset: 1}">Tên tài khoản</nz-form-label>
-            <nz-form-control [nzLg]="{span: 16, offset: 0}">
-              <input nz-input  />
+            <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
+              <nz-card style="width: 70%;" nzTitle="Tiếng Anh">
+                <h3  style="margin-top: -10px;">Tổng điểm KN: 900 KN</h3>
+              </nz-card>
             </nz-form-control>
           </nz-form-item>
+        </div>
+      </div>
+      <!-- Thành tích -->
+      <div nz-row nzType="flex" nzJustify="start">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-control [nzLg]="{span: 12, offset: 0}">
+              <h1>Thành Tích</h1>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div *ngFor="let item of achievements">
+        <div nz-row nzType="flex" nzJustify="start">
+          <div nz-col [nzSpan]="12">
+            <nz-form-item>
+              <nz-form-control [nzLg]="{span: 3, offset: 0}">
+                <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
+              </nz-form-control>
+              <nz-form-control [nzLg]="{span: 16, offset: 0}">
+                <h1 >{{item.name}}</h1>
+                <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
+                <div style="margin-top: -20px;">
+                  <nz-progress [nzPercent]="item.percent" nzStatus="active" ></nz-progress>
+                </div>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
         </div>
       </div>
     </nz-layout>
