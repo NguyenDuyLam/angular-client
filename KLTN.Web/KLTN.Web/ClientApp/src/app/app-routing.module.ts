@@ -11,11 +11,10 @@ import { PagesModule } from './pages/page.module';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuListComponent } from './pages/page-admin/menu/menu-list/menu-list.component';
 import { IndexComponent } from './pages/page-client/index/index.component';
-import { PhoneComponent } from './pages/page-client/phone/phone.component';
-import { CartComponent } from './pages/page-client/cart/cart.component';
-import { PayComponent } from './pages/page-client/pay/pay.component';
 import { BillListComponent } from './pages/page-admin/bills/bill-list/bill-list.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { StoreComponent } from './pages/page-client/store/store.component';
+import { UserProfileComponent } from './pages/page-client/user-profile/user-profile.component';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/index' },
@@ -33,12 +32,10 @@ const routes: Routes = [
     ]},
     //client
     { path: 'index', component: IndexComponent, children: [
-      { path: ':menuCode/:productCode', component: PhoneComponent },
-      { path: 'cart', component: CartComponent },
+      { path: 'store', component: StoreComponent },
+      { path: 'user-profile', component: UserProfileComponent },
     ]},
-
-    { path: 'pay', component: PayComponent },
-
+    
     
 
 

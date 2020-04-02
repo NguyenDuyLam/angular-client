@@ -28,10 +28,11 @@ import { JwtInterceptor } from '../services/helper/Jwt.Interceptor';
 import { MenuListComponent } from './page-admin/menu/menu-list/menu-list.component';
 import { MenuDetailComponent } from './page-admin/menu/menu-detail/menu-detail.component';
 import { IndexComponent } from './page-client/index/index.component';
-import { PhoneComponent } from './page-client/phone/phone.component';
-import { CartComponent } from './page-client/cart/cart.component';
-import { PayComponent } from './page-client/pay/pay.component';
 import { RegisterComponent } from './register/register.component';
+import { StoreComponent } from './page-client/store/store.component';
+import { ExerciseComponent } from './page-client/exercise/exercise.component';
+import { ArenaComponent } from './page-client/arena/arena.component';
+import { UserProfileComponent } from './page-client/user-profile/user-profile.component';
 
 
 
@@ -57,11 +58,12 @@ import { RegisterComponent } from './register/register.component';
     MenuListComponent,
     MenuDetailComponent,
     IndexComponent,
-    PhoneComponent,
-    CartComponent,
-    PayComponent,
     BillListComponent,
     RegisterComponent,
+    StoreComponent,
+    ExerciseComponent,
+    ArenaComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
