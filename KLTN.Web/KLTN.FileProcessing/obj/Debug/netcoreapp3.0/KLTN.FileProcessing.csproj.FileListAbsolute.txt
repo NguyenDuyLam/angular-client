@@ -1,7 +1,0 @@
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\bin\Debug\netcoreapp3.0\KLTN.FileProcessing.deps.json
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\bin\Debug\netcoreapp3.0\KLTN.FileProcessing.dll
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\bin\Debug\netcoreapp3.0\KLTN.FileProcessing.pdb
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\obj\Debug\netcoreapp3.0\KLTN.FileProcessing.AssemblyInfoInputs.cache
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\obj\Debug\netcoreapp3.0\KLTN.FileProcessing.AssemblyInfo.cs
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\obj\Debug\netcoreapp3.0\KLTN.FileProcessing.dll
-C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.FileProcessing\obj\Debug\netcoreapp3.0\KLTN.FileProcessing.pdb
