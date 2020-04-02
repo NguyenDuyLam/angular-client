@@ -1,1 +1,28 @@
-<p>store works!</p>
+<!-- Thành tích -->
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 12, offset: 0}">
+                <h1>Cửa Hàng</h1>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+<div *ngFor="let item of products">
+    <div nz-row nzType="flex" nzJustify="start">
+        <div nz-col [nzSpan]="12">
+            <nz-form-item>
+                <nz-form-control [nzLg]="{span: 3, offset: 0}">
+                    <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
+                </nz-form-control>
+                <nz-form-control [nzLg]="{span: 16, offset: 0}">
+                    <h1>{{item.name}}</h1>
+                    <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
+                </nz-form-control>
+                <nz-form-control [nzLg]="{span: 5, offset: 0}">
+                    <button nz-button nzType="primary">MUA VỚI GIÁ: {{item.value}}</button>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+    </div>
+</div>
