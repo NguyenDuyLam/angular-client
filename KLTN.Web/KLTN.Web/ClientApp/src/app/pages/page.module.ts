@@ -33,6 +33,7 @@ import { StoreComponent } from './page-client/store/store.component';
 import { ExerciseComponent } from './page-client/exercise/exercise.component';
 import { ArenaComponent } from './page-client/arena/arena.component';
 import { UserProfileComponent } from './page-client/user-profile/user-profile.component';
+import { GrammarComponent } from './page-client/grammar/grammar.component';
 
 
 
@@ -64,6 +65,7 @@ import { UserProfileComponent } from './page-client/user-profile/user-profile.co
     ExerciseComponent,
     ArenaComponent,
     UserProfileComponent,
+    GrammarComponent,
   ],
   imports: [
     BrowserModule,

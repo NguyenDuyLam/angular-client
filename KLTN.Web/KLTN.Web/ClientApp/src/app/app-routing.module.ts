@@ -15,6 +15,8 @@ import { BillListComponent } from './pages/page-admin/bills/bill-list/bill-list.
 import { RegisterComponent } from './pages/register/register.component';
 import { StoreComponent } from './pages/page-client/store/store.component';
 import { UserProfileComponent } from './pages/page-client/user-profile/user-profile.component';
+import { ExerciseComponent } from './pages/page-client/exercise/exercise.component';
+import { GrammarComponent } from './pages/page-client/grammar/grammar.component';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/index' },
@@ -34,6 +36,8 @@ const routes: Routes = [
     { path: 'index', component: IndexComponent, children: [
       { path: 'store', component: StoreComponent },
       { path: 'user-profile', component: UserProfileComponent },
+      { path: 'exercise', component: ExerciseComponent },
+      { path: 'grammar', component: GrammarComponent },
     ]},
     
     

@@ -1,1 +1,129 @@
-<p>exercise works!</p>
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-item>
+                <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
+                    <nz-card
+                        style="width: 70%; border-radius: 16px; border: 2px solid #e5e5e5; border-bottom: 2px solid #e5e5e5;"
+                        nzTitle="Tiếng Anh">
+                        <h3 style="margin-top: -10px; ">Tổng điểm KN: <nz-avatar [nzShape]="'square'"
+                                nzSrc="/assets/images/pointTotal-icon-menu.png" [nzSize]="30"></nz-avatar> 900 </h3>
+                    </nz-card>
+                </nz-form-control>
+            </nz-form-item>
+        </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
+                <nz-card
+                    style="width: 70%; border-radius: 16px; border: 2px solid #e5e5e5; border-bottom: 2px solid #e5e5e5;"
+                    nzTitle="Thành Tích Tiếp Theo">
+                    <div nz-row nzType="flex" nzJustify="start">
+                        <div nz-col [nzSpan]="6">
+                            <nz-form-item>
+                                <nz-form-control>
+                                    <nz-avatar [nzSrc]="achievement.image"
+                                        style="height: 100px; width: 80px; border-radius: 15%;" [nzSize]="100">
+                                    </nz-avatar>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col [nzSpan]="12">
+                            <nz-form-item>
+                                <nz-form-control>
+                                    <h2>{{achievement.name}}</h2>
+                                    <div>
+                                        <nz-progress [nzPercent]="achievement.percent" nzStatus="active"></nz-progress>
+                                    </div>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                    </div>
+                </nz-card>
+            </nz-form-control>
+        </nz-form-item>
+
+    </div>
+</div>
+<!-- Từ Vựng -->
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 12, offset: 0}">
+                <h1>Từ Vựng</h1>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12" style="border-top: 4px solid #e5e5e5;">
+        <nz-form-item style=" margin-top: 10px;">
+            <nz-form-control [nzLg]="{span: 12, offset: 0}" style="float: left;position: relative;left: 25%;">
+                <nz-progress [nzPercent]="60" [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="float: left;position: relative;left: 40%;">
+                <h3>Sau này chèn hình css vô</h3>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="float: left;position: relative;left: 40%;">
+                <button nz-button nzType="primary">Bắt Đầu</button>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<!-- Ngữ Pháp -->
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 12, offset: 0}">
+                <h1>Ngữ Pháp</h1>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12" style="border-top: 4px solid #e5e5e5;">
+        <nz-form-item style=" margin-top: 10px;">
+            <nz-form-control [nzLg]="{span: 12, offset: 0}" style="float: left;position: relative;left: 25%;">
+                <nz-progress [nzPercent]="60" [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="float: left;position: relative;left: 40%;">
+                <h3>Sau này chèn hình css vô</h3>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
+
+<div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+        <nz-form-item>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="float: left;position: relative;left: 40%;">
+                <button nz-button nzType="primary">Bắt Đầu</button>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+</div>
