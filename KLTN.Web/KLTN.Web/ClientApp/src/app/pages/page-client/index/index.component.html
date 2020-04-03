@@ -1,29 +1,29 @@
 <nz-layout>
-  <nz-header>
+  <nz-header class = "MenuHeader">
     <!-- <div class="logo"></div> -->
     <div class="indexMenu">
-      <ul nz-menu nzMode="horizontal">
+      <ul nz-menu nzMode="horizontal" style="width: 105%; height: 64px;">
         <li nz-menu-item nzSelected>
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/earth-icon-menu.png" [nzSize]="50"></nz-avatar>
           NameApp
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/grammar-icon-menu.png" [nzSize]="50"></nz-avatar>
           Ngữ Pháp
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/vocabulary-icon-menu.png" [nzSize]="50"></nz-avatar>
           Từ Vựng
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/sword-icon-menu.png" [nzSize]="50"></nz-avatar>
           Đấu Trường
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/store-icon-menu.png" [nzSize]="50"></nz-avatar>
           Cửa Hàng
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <a nz-dropdown [nzDropdownMenu]="store">
             <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/vcoin-icon-menu.png" [nzSize]="50"></nz-avatar>
             100
@@ -34,11 +34,11 @@
             </ul>
           </nz-dropdown-menu>
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/pointTotal-icon-menu.png" [nzSize]="50"></nz-avatar>
           500
         </li>
-        <li nz-menu-item nzSelected>
+        <li nz-menu-item >
           <a nz-dropdown [nzDropdownMenu]="avatar">
             <nz-avatar [nzSize]="50" nzSrc="/assets/images/avatar.png"></nz-avatar>
           </a>
@@ -59,44 +59,47 @@
         <div nz-col [nzSpan]="12">
           <nz-form-item>
             <nz-form-control [nzLg]="{span: 3, offset: 0}">
-              <nz-avatar [nzSize]="64" nzSrc="/assets/images/avatar.png"></nz-avatar>
-              <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/">
+              <nz-avatar [nzSize]="64" nzSrc="/assets/images/avatar.png" style="position: relative; margin-top: 10px;">
+
+              </nz-avatar>
+              <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" style="z-index: 100; position: absolute;">
                 <button nz-button nzShape="circle" style="margin-left: -10px;"><i nz-icon nzType="edit" nzTheme="outline"></i></button>
               </nz-upload>
             </nz-form-control>
-            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="padding-top: 10px;">
-              <h1>Dat Nguyen</h1>
+            <nz-form-control [nzLg]="{span: 16, offset: 0}" style="padding-top: 10px; padding-left: 10px;">
+              <h1 style="margin: 10px;">Dat Nguyen</h1>
             </nz-form-control>
           </nz-form-item>
         </div>
         <div nz-col [nzSpan]="12">
           <nz-form-item>
             <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
-              <nz-card style="width: 70%;" nzTitle="Tiếng Anh">
-                <h3  style="margin-top: -10px;">Tổng điểm KN: 900 KN</h3>
+              <nz-card style="width: 70%; border-radius: 16px; border: 2px solid #e5e5e5; border-bottom: 2px solid #e5e5e5;" nzTitle="Tiếng Anh">
+                <h3  style="margin-top: -10px; ">Tổng điểm KN: 900 KN</h3>
               </nz-card>
             </nz-form-control>
           </nz-form-item>
+
         </div>
       </div>
       <!-- Thành tích -->
       <div nz-row nzType="flex" nzJustify="start">
-        <div nz-col [nzSpan]="12">
+        <div nz-col [nzSpan]="12" >
           <nz-form-item>
-            <nz-form-control [nzLg]="{span: 12, offset: 0}">
+            <nz-form-control [nzLg]="{span: 12, offset: 0}"  >
               <h1>Thành Tích</h1>
             </nz-form-control>
           </nz-form-item>
         </div>
       </div>
       <div *ngFor="let item of achievements">
-        <div nz-row nzType="flex" nzJustify="start">
-          <div nz-col [nzSpan]="12">
-            <nz-form-item>
+        <div nz-row nzType="flex" nzJustify="start" >
+          <div nz-col [nzSpan]="12" style="border-top: 4px solid #e5e5e5;">
+            <nz-form-item style=" margin-top: 10px;" >
               <nz-form-control [nzLg]="{span: 3, offset: 0}">
-                <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
+                <nz-avatar  [nzSrc]="item.image" style="height: 100px; width: 80px; border-radius: 15%;"></nz-avatar>
               </nz-form-control>
-              <nz-form-control [nzLg]="{span: 16, offset: 0}">
+              <nz-form-control [nzLg]="{span: 16, offset: 0}" style="margin-left: 30px">
                 <h1 >{{item.name}}</h1>
                 <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
                 <div style="margin-top: -20px;">

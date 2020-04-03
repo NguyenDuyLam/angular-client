@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {}
+    "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+    "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
         "projectName": "KLTN.Common",
-        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
-        "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\obj\\",
+        "projectPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj",
+        "packagesPath": "C:\\Users\\Lam Nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ANH DAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lam Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,29 +76,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
+    "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
         "projectName": "KLTN.Models",
-        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
-        "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\obj\\",
+        "projectPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj",
+        "packagesPath": "C:\\Users\\Lam Nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ANH DAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lam Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,8 +125,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
-                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
+              "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+                "projectPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
               }
             }
           }
@@ -161,29 +175,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {
+    "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
         "projectName": "KLTN.ViewModels",
-        "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\ANH DAT\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.ViewModels\\obj\\",
+        "projectPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.ViewModels\\KLTN.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Lam Nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ANH DAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lam Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -196,11 +224,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
-                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
+              "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj": {
+                "projectPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Common\\KLTN.Common.csproj"
               },
-              "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
-                "projectPath": "D:\\Work\\Project\\KLTN\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
+              "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj": {
+                "projectPath": "C:\\Users\\Lam Nguyen\\Documents\\KL\\kltn-master\\KLTN.Web\\KLTN.Models\\KLTN.Models.csproj"
               }
             }
           }
@@ -229,12 +257,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
