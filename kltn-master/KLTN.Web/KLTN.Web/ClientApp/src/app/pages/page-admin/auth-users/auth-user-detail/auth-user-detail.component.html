@@ -1,0 +1,192 @@
+<form nz-form [formGroup]="authUserForm">
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mã tài khoản</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="code" />
+          <nz-form-explain *ngIf="showExplain('code', 'required')">
+            Vui lòng điền mã tài khoản
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Tên tài khoản</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="fullname" />
+          <nz-form-explain *ngIf="showExplain('fullname', 'required')">
+            Vui lòng điền Tên tài khoản
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">UserName</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="username" />
+          <nz-form-explain *ngIf="showExplain('username', 'required')">
+            Vui lòng điền UserName
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12" *ngIf="!params.id">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Password</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input type="password" nz-input formControlName="password" />
+          <nz-form-explain *ngIf="showExplain('password', 'required')">
+            Vui lòng điền Password
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="12" *ngIf="params.id">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Email</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input type="email" nz-input formControlName="email" />
+          <nz-form-explain *ngIf="showExplain('email', 'required')">
+            Vui lòng điền Email
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12" *ngIf="!params.id">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Nhập lại Password</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input type="password" nz-input formControlName="confirmPassword" />
+          <nz-form-explain *ngIf="showExplain('confirmPassword', 'required')">
+            Vui lòng điền Password
+          </nz-form-explain>
+          <nz-form-explain style="color: red;" *ngIf="checkConfirmPassWordValidator()">
+          Mật khẩu không giống
+        </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12" *ngIf="!params.id">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Email</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input type="email" nz-input formControlName="email" />
+          <nz-form-explain *ngIf="showExplain('email', 'required')">
+            Vui lòng điền Email
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label nzFor="birthDate" [nzSpan]="8">Ngày sinh</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <!-- <nz-date-picker [nzSize]="size" formControlName="birthDate"></nz-date-picker> -->
+          <nz-date-picker formControlName="birthDate" nzFormat="dd/MM/yyyy"></nz-date-picker>
+          <nz-form-explain *ngIf="showExplain('birthDate', 'required')">
+            Vui lòng chọn ngày sinh
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Giới tính</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-select formControlName="genderId" nzDropdownMatchSelectWidth [nzLoading]="genderLoading">
+            <nz-option *ngFor="let item of genders " [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+          </nz-select>
+          <nz-form-explain *ngIf="showExplain('genderId', 'required')">
+            Vui lòng chọn giới tính
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Số điện thoại</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="phoneNumber" />
+          <nz-form-explain *ngIf="showExplain('phoneNumber', 'required')">
+            Vui lòng điền Số điện thoại
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Địa chỉ</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input  nz-input formControlName="address" />
+          <nz-form-explain *ngIf="showExplain('address', 'required')">
+            Vui lòng điền Địa chỉ
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Tinh thành phố</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-select id="provinceId" formControlName="provinceId" (ngModelChange)="provinceOnchanges($event)" nzShowSearch nzDropdownMatchSelectWidth [nzLoading]="isLoading">
+            <nz-option *ngFor="let item of provinces" [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+          </nz-select>
+          <nz-form-explain *ngIf="showExplain('provinceId', 'required')">
+            Vui lòng chọn Tinh thành phố
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Quận huyện</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-select [nzDisabled]="districtDisable" id="districtId" formControlName="districtId" nzShowSearch nzDropdownMatchSelectWidth [nzLoading]="districtLoading">
+            <nz-option *ngFor="let item of districts" [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+          </nz-select>
+          <nz-form-explain *ngIf="showExplain('districtId', 'required')">
+            Vui lòng chọn Quận huyện
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-control [nzLg]="{span: 16, offset: 8}">
+          <label nz-checkbox formControlName="isActivated">Hoạt Động</label>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
+
+

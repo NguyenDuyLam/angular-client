@@ -1,0 +1,44 @@
+<form nz-form [formGroup]="metadataValueForm">
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mã Metadata</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="code" />
+          <nz-form-explain *ngIf="showExplain('code', 'required')">
+            Vui lòng điền mã Metadata
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Tên Metadata </nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="name" />
+          <nz-form-explain *ngIf="showExplain('name', 'required')">
+            Vui lòng điền Tên Metadata
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Loại Metadata </nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-select formControlName="typeId" nzDropdownMatchSelectWidth>
+            <nz-option *ngFor="let item of metadataTypes " [nzValue]="item.id" [nzLabel]="item.code + ' - ' + item.name"></nz-option>
+          </nz-select>
+          <nz-form-explain *ngIf="showExplain('typeId', 'required')">
+            Vui lòng chọn loại Metadata
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>

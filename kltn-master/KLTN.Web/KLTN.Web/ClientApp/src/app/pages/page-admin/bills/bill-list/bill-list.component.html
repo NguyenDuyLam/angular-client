@@ -1,0 +1,61 @@
+<h2>Quản lý Hóa Đơn</h2>
+
+<div class="filter-area">
+    <div nz-row nzType="flex" nzAlign="middle">
+      <div nz-col nzSpan="3"><label>Trạng thái hóa đơn:</label></div>
+      <div nz-col nzSpan="6">
+        <nz-select style="width: 100%;" [(ngModel)]="selectedStatus" nzAllowClear nzDropdownMatchSelectWidth>
+          <nz-option *ngFor="let item of status" [nzValue]="item.value" [nzLabel]="item.name"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-col nzSpan="2" nzOffset="1">
+        <button nz-button nzType="primary" (click)="search()">
+          <i class="anticon" nz-icon nzType="search"></i>Tìm
+        </button>
+      </div>
+    </div>
+    <br />
+    <div nz-row nzJustify="end" nzType="flex">
+      <div nz-col nzSpan="2" nzOffset="1">
+        <button nzSize="small" nz-button nzType="primary" (click)="refresh()">
+          <i nz-icon nzType="sync" nzTheme="outline"></i>Refresh
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="table"> 
+    <nz-table 
+    #rowSelectionTable
+    nzShowPagination
+    nzShowSizeChanger
+    [nzData]="bills"
+    >
+    <thead>
+      <tr>
+        <th th-default>Tên khách hàng</th>
+        <th th-default>Khuyến mãi</th>
+        <th th-default>Tổng tiền</th>
+        <th th-default>Tình Trạng</th>
+        <th th-default>Ngày tạo</th>
+        <th action nzRight="0px">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of rowSelectionTable.data">
+        <td *ngIf="data.authUserFullName">{{data.authUserCode  + ' - ' + data.authUserFullName }}</td>
+        <td *ngIf="data.promotionCode">{{data.promotionCode  + ' - ' + data.promotionName }}</td>
+        <td *ngIf="!data.promotionCode">Không áp dụng</td>
+        <td >{{data.total | currency: 'VND' }}</td>
+        <td *ngIf="data.status == pending" style="color: red;" >{{data.status }}</td>
+        <td *ngIf="data.status == approved" style="color: green;" >{{data.status }}</td>
+        <td>{{ data.created | date:'dd/MM/yyyy HH:mm' }}</td>
+        <td action nzRight="0px">
+          <a *ngIf="data.status == pending" (click)="edit(data)">Duyệt</a>
+        </td>
+      </tr>
+    </tbody>
+    </nz-table>
+  </div>

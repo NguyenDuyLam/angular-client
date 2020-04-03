@@ -1,0 +1,28 @@
+<form nz-form [formGroup]="metadataTypeForm">
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="11">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mã loại Metadata</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="code" />
+          <nz-form-explain *ngIf="showExplain('code', 'required')">
+            Vui lòng điền mã loại Metadata
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzLg]="{span: 2, offset: 0}"></div>
+    <div nz-col [nzSpan]="11">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Tên loại Metadata </nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="name" />
+          <nz-form-explain *ngIf="showExplain('name', 'required')">
+            Vui lòng điền Tên loại Metadata
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <br />
+</form>

@@ -1,0 +1,102 @@
+<h2>Quản lý Sản phẩm</h2>
+
+<nz-spin nzTip="Đang tải..." [nzSpinning]="isLoading">
+  <div class="context-menu">
+    <p *ngIf="!isLoading && (!nodes || !nodes.length)">Không có dữ liệu</p>
+    <nz-tree #nzTreeComponent  [nzData]="nodes" (nzDblClick)="openFolder($event)" (nzClick)="activeNode($event)"
+             [nzCheckedKeys]="defaultCheckedKeys"
+             [nzExpandedKeys]="defaultExpandedKeys"
+             [nzSelectedKeys]="defaultSelectedKeys"
+             (nzCheckBoxChange)="nzCheck($event)"
+             (nzExpandChange)="nzCheck($event)">
+      <ng-template #nzTreeTemplate let-node>
+        <span class="custom-node" [class.active]="activedNode?.key === node.key">
+          <span *ngIf="!node.isLeaf">
+            <i nz-icon [type]="node.isExpanded ? 'folder-open' : 'folder'" (click)="openFolder(node)"></i>
+            <span class="folder-name" (click)="updateTable(node)">  {{ node.title }}</span>
+          </span>
+        </span>
+      </ng-template>
+    </nz-tree>
+  </div>
+</nz-spin>
+<br/>
+
+<div class="filter-area">
+   <div nz-row nzType="flex" nzAlign="middle">
+    <div nz-col nzSpan="3"><label>Nhà sản xuất:</label></div>
+    <div nz-col nzSpan="6">
+      <nz-select style="width: 100%;" [(ngModel)]="selectedProducer" nzAllowClear nzDropdownMatchSelectWidth>
+        <nz-option *ngFor="let item of producers" [nzValue]="item.id" [nzLabel]="item.code + ' - ' + item.name"></nz-option>
+      </nz-select>
+    </div>
+  </div>
+  <br/>
+  <div nz-row nzType="flex" nzAlign="middle">
+    <div nz-col nzSpan="3"><label>Từ khoá:</label></div>
+    <div nz-col nzSpan="6"><input #box type="text" nz-input placeholder="Nhập từ khóa" [(ngModel)]="tableInfo.keyWord" /></div>
+    <div nz-col nzSpan="2" nzOffset="1">
+      <button nz-button nzType="primary" (click)="search()">
+        <i class="anticon" nz-icon nzType="search"></i>Tìm
+      </button>
+    </div>
+  </div>
+  <br />
+  <div nz-row nzJustify="end" nzType="flex">
+    <div nz-col nzSpan="1">
+      <button nzSize="small" nz-button nzType="primary" (click)="edit(null)">
+        <i class="anticon anticon-plus"></i>Thêm
+      </button>
+
+    </div>
+    <div nz-col nzSpan="2" nzOffset="1">
+      <button nzSize="small" nz-button nzType="primary" (click)="refresh()">
+        <i nz-icon nzType="sync" nzTheme="outline"></i>Refresh
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="p10"></div>
+
+<div class="table"> 
+  <nz-table 
+  #rowSelectionTable
+  nzShowPagination
+  nzShowSizeChanger
+  [nzLoading]="tableInfo.loading"
+  [nzData]="products"
+  >
+  <thead>
+    <tr>
+      <th th-default>Mã sản phẩm</th>
+      <th th-default>Tên sản phẩm</th>
+      <th th-default>Danh mục hiển thị</th>
+      <th th-default>Nhà sản xuất</th>
+      <!-- <th th-default>Mô tả</th> -->
+      <th th-default>Giá</th>
+      <th th-default>kinh doanh</th>
+      <th action nzRight="0px">Thao tác</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of rowSelectionTable.data">
+      <td>{{data.code}}</td>
+      <td>{{data.name}}</td>
+      <td><span *ngIf="data.menuCode">{{ data.menuCode  + ' - ' +  data.menuName}}</span></td>
+      <td><span *ngIf="data.producerName">{{ data.producerCode  + ' - ' +  data.producerName}}</span></td>
+      <!-- <td>{{data.description}}</td> -->
+      <td>{{data.price}}</td>
+      <td><div style="text-align: center"><i *ngIf="data.isSell" i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i></div></td>
+      <td action nzRight="0px">
+        <a (click)="edit(data)">Sửa</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a nz-popconfirm nzTitle="Bạn có chắc muốn xóa mục này?" nzOkText="Đồng ý"  nzCancelText="Hủy" (nzOnConfirm)="deleteRow(data.id)">Xoá</a>
+      </td>
+    </tr>
+  </tbody>
+  </nz-table>
+</div>
+
+
+

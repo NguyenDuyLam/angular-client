@@ -1,0 +1,15 @@
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Services.deps.json
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Services.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Services.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.csprojAssemblyReference.cache
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.AssemblyInfoInputs.cache
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.AssemblyInfo.cs
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Common.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Models.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.ViewModels.dll
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Common.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.Models.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\bin\Debug\netcoreapp3.0\KLTN.ViewModels.pdb
+C:\Users\ANH DAT\Desktop\KLTN.Web\KLTN.Services\obj\Debug\netcoreapp3.0\KLTN.Services.csproj.CopyComplete

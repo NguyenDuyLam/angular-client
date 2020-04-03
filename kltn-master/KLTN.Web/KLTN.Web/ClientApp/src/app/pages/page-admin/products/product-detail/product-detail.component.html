@@ -1,0 +1,144 @@
+<form nz-form [formGroup]="productForm">
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mã sản phẩm</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="code" />
+          <nz-form-explain *ngIf="showExplain('code', 'required')">
+            Vui lòng điền mã sản phẩm
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Tên sản phẩm</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <input nz-input formControlName="name" />
+          <nz-form-explain *ngIf="showExplain('name', 'required')">
+            Vui lòng điền Tên sản phẩm
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Nhà sản xuất</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-select id="provinceId" formControlName="producerId" nzShowSearch nzDropdownMatchSelectWidth [nzLoading]="isLoading">
+            <nz-option *ngFor="let item of producers" [nzValue]="item.id" [nzLabel]="item.code + ' - ' + item.name"></nz-option>
+          </nz-select>
+          <nz-form-explain *ngIf="showExplain('producerId', 'required')">
+            Vui lòng chọn nhà sản xuất
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Danh mục hiển thị</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-select id="provinceId" formControlName="menuId" nzShowSearch nzDropdownMatchSelectWidth [nzLoading]="isLoading">
+            <nz-option *ngFor="let item of menus" [nzValue]="item.id" [nzLabel]="item.code + ' - ' + item.name"></nz-option>
+          </nz-select>
+          <nz-form-explain *ngIf="showExplain('menuId', 'required')">
+            Vui lòng chọn danh mục hiển thị
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzType="flex" nzJustify="start">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Giá sản phẩm</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <nz-input-group nzAddOnAfter="VND">
+            <input nz-input nz-col formControlName="price" />
+          </nz-input-group>
+          <nz-form-explain *ngIf="showExplain('price', 'required')">
+            Vui lòng điền giá sản phẩm
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!--<div nz-col [nzLg]="{span: 2, offset: 0}"></div>-->
+    <div nz-col [nzSpan]="12">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="8">Mô tả</nz-form-label>
+        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+          <textarea nz-input formControlName="description"></textarea>
+          <nz-form-explain *ngIf="showExplain('description', 'required')">
+            Vui lòng điền mô tả sản phẩm
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzType="flex" nzJustify="start" nzAlign="middle">
+    <div nz-col [nzLg]="{span: 4, offset: 4}">
+      <div class="clearfix">
+        <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/"
+                   nzListType="picture-card"
+                   [(nzFileList)]="fileList"
+                   [nzShowButton]="fileList.length < 1"
+                   [nzShowUploadList]="showUploadList"
+                   [nzPreview]="handlePreview"
+                   [nzCustomRequest]="customReq"
+                   [nzRemove]="removeImage">
+          <i nz-icon nzType="plus"></i>
+          <div class="ant-upload-text">Upload</div>
+        </nz-upload>
+        <nz-modal [nzVisible]="previewVisible"
+                  [nzContent]="modalContent"
+                  [nzFooter]="null"
+                  (nzOnCancel)="previewVisible = false">
+          <ng-template #modalContent>
+            <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+          </ng-template>
+        </nz-modal>
+      </div>
+    </div>
+  </div>
+    
+
+
+    <!--<div nz-row nzType="flex" nzJustify="start" nzAlign="middle">
+      <div nz-col [nzLg]="{span: 4, offset: 1}">
+        <nz-form-control>
+          <div class="p10 center" *ngIf="previewImage">
+            <img class="full-width" [src]="previewImage" />
+          </div>
+          <div class="p10 center" *ngIf="!previewImage">
+            <img class="full-width" src="assets/images/image-empty.png" />
+          </div>
+        </nz-form-control>
+      </div>
+      <div nz-col [nzLg]="{span: 3, offset: 1}">
+        <nz-form-control>
+          <nz-upload  [nzBeforeUpload]="beforeUploadLogo">
+            <button nz-button><i nz-icon nzType="upload"></i><span>Chọn file</span></button>
+          </nz-upload>
+          <button nz-button [nzType]="'primary'"  (click)="handleUpload()"
+                  [disabled]="!downloadFile" style="margin-top: 16px">
+            {{ logos['Logo'].uploading ? 'Đang upload' : 'Tải lên' }}
+          </button>
+        </nz-form-control>
+      </div>
+      <div nz-col [nzLg]="{span: 5, offset: 5}">
+        <nz-form-item>
+          <nz-form-control [nzLg]="{span: 16, offset: 8}">
+            <label formControlName="isSell" nz-checkbox>Kinh doanh</label>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>-->
+
+</form>

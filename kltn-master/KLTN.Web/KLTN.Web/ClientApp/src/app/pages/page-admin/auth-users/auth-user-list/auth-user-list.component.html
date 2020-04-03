@@ -1,0 +1,79 @@
+<h2>Quản lý Tài Khoản</h2>
+
+<div class="filter-area">
+
+  <div nz-row nzType="flex" nzAlign="middle">
+    <div nz-col nzSpan="3"><label>Từ khoá:</label></div>
+    <div nz-col nzSpan="6"><input #box type="text" nz-input placeholder="Nhập từ khóa" [(ngModel)]="tableInfo.keyWord" /></div>
+    <div nz-col nzSpan="2" nzOffset="1">
+      <button nz-button nzType="primary" (click)="search()">
+        <i class="anticon" nz-icon nzType="search"></i>Tìm
+      </button>
+    </div>
+  </div>
+
+  <br />
+
+  <div nz-row nzJustify="end" nzType="flex">
+    <div nz-col nzSpan="1">
+      <button nzSize="small" nz-button nzType="primary" (click)="edit(null)">
+        <i class="anticon anticon-plus"></i>Thêm
+      </button>
+
+    </div>
+    <div nz-col nzSpan="2" nzOffset="1">
+      <button nzSize="small" nz-button nzType="primary" (click)="refresh()">
+        <i nz-icon nzType="sync" nzTheme="outline"></i>Refresh
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div class="p10"></div>
+
+<nz-table #dataTable [nzData]="authUsers" nzShowSizeChanger [nzFrontPagination]="false" [nzLoading]="tableInfo.loading"
+          [nzTotal]="tableInfo.total" [(nzPageIndex)]="tableInfo.pageIndex" [(nzPageSize)]="tableInfo.pageSize"
+          (nzPageIndexChange)="getList()" (nzPageSizeChange)="getList(true)"
+          [nzScroll]="{ x: '1060px'}">
+  <thead>
+    <tr>
+      <th th-default>Code</th>
+      <th th-default>Tên</th>
+      <th th-default>Email</th>
+      <th th-default>Username</th>
+      <th th-default>Admin</th>
+      <th th-default>Hoạt động</th>
+      <th th-default>Giới tính</th>
+      <th th-default>Ngày sinh</th>
+      <th th-default>Số điện thoại</th>
+      <th th-default>Địa chỉ</th>
+      <th action nzRight="0px">Thao tác</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataTable.data">
+      <td>{{data.code}}</td>
+      <td>{{data.fullname}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.username}}</td>
+      <td><div style="text-align: center"><i *ngIf="data.role" i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i></div></td>
+      <td><div style="text-align: center"><i *ngIf="data.isActivated" i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i></div></td>
+      <td>{{data.genderName}}</td>
+      <td>{{data.birthDate | date:'dd/MM/yyyy'}}</td>
+      <td>{{data.phoneNumber}}</td>
+      <td>
+        {{ data.address }}
+        <span *ngIf="data.districtName"> {{ ', ' + data.districtName }}</span>
+        <span *ngIf="data.provinceName"> {{ ', ' + data.provinceName }}</span>
+      </td>
+
+      <td action nzRight="0px">
+        <a (click)="edit(data)">Sửa</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a nz-popconfirm nzTitle="Bạn có chắc muốn xóa mục này?" nzOkText="Đồng ý"  nzCancelText="Hủy" (nzOnConfirm)="deleteRow(data.id)">Xoá</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
