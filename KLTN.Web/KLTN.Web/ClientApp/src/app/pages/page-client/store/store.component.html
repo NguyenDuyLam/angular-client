@@ -1,28 +1,43 @@
 <!-- Thành tích -->
-<div nz-row nzType="flex" nzJustify="start">
-    <div nz-col [nzSpan]="12">
+<div nz-row>
+    <div nz-col [nzSpan]="7" [nzPush]="17">
         <nz-form-item>
-            <nz-form-control [nzLg]="{span: 12, offset: 0}">
-                <h1>Cửa Hàng</h1>
+            <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
+                <nz-card style="width: 100%; border-radius: 16px; border: 2px solid #e5e5e5; border-bottom: 2px solid #e5e5e5;" nzTitle="Tiếng Anh">
+                    <h3 style="margin-top: -10px; ">Tổng điểm KN:
+                        <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/pointTotal-icon-menu.png" [nzSize]="30"></nz-avatar> 900</h3>
+                </nz-card>
             </nz-form-control>
         </nz-form-item>
     </div>
-</div>
-<div *ngFor="let item of products">
-    <div nz-row nzType="flex" nzJustify="start">
-        <div nz-col [nzSpan]="12">
-            <nz-form-item>
-                <nz-form-control [nzLg]="{span: 3, offset: 0}">
-                    <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
-                </nz-form-control>
-                <nz-form-control [nzLg]="{span: 16, offset: 0}">
-                    <h1>{{item.name}}</h1>
-                    <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
-                </nz-form-control>
-                <nz-form-control [nzLg]="{span: 5, offset: 0}">
-                    <button nz-button nzType="primary">MUA VỚI GIÁ: <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/star-gold.png" [nzSize]="30"></nz-avatar>{{item.value}}</button>
-                </nz-form-control>
-            </nz-form-item>
+    <div nz-col [nzSpan]="17" [nzPull]="7">
+        <div nz-row nzType="flex" nzJustify="start">
+            <div nz-col [nzSpan]="24">
+                <nz-form-item>
+                    <nz-form-control [nzLg]="{span: 12, offset: 0}">
+                        <h1>Cửa Hàng</h1>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        </div>
+        <div *ngFor="let item of products">
+            <div nz-row nzType="flex" nzJustify="start">
+                <div nz-col [nzSpan]="20">
+                    <nz-form-item class="itemControl">
+                        <nz-form-control [nzLg]="{span: 3, offset: 0}">
+                            <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
+                        </nz-form-control>
+                        <nz-form-control [nzLg]="{span: 16, offset: 0}">
+                            <h1>{{item.name}}</h1>
+                            <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
+                        </nz-form-control>
+                        <nz-form-control [nzLg]="{span: 5, offset: 0}" class="Price">
+                            <button nz-button nzType="primary">MUA VỚI GIÁ: <nz-avatar [nzShape]="'square'"
+                nzSrc="/assets/images/star-gold.png" [nzSize]="25"></nz-avatar>{{item.value}}</button>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
         </div>
     </div>
 </div>
