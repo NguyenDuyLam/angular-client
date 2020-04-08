@@ -1,0 +1,18 @@
+.card {
+    width: 70%;
+    border-radius: 16px;
+    border: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+    height: 250px;
+}
+
+.Achievements {
+    margin-left: 10%;
+}
+
+.item {
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid #e5e5e5;
+    margin-top: 2%;
+}

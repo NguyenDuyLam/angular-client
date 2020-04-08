@@ -1,88 +1,87 @@
 <nz-layout>
-  <nz-header class="MenuHeader">
-    <!-- <div class="logo"></div> -->
-    <div class="indexMenu">
-      <ul nz-menu nzMode="horizontal" style="width: 105%; height: 64px;">
-        <li nz-menu-item nzSelected>
-          <a routerLink="/index/user-profile">
-            <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/earth-icon-menu.png" [nzSize]="50"></nz-avatar>NameApp
-          </a>
-        </li>
-        <li nz-menu-item>
-          <a nz-dropdown [nzDropdownMenu]="exercise">
-            <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/gradution.png" [nzSize]="50"></nz-avatar>
-            Học
-          </a>
-          <nz-dropdown-menu #exercise="nzDropdownMenu">
-            <ul nz-menu nzSelectable>
-              <li nz-menu-item>
-                <a routerLink="/index/grammar">
-                  <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/books.png" [nzSize]="50"></nz-avatar>
-                  Ngữ Pháp
-                </a>
-              </li>
-              <li nz-menu-item>
-                <a routerLink="/index/exercise">
-                  <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/dumbbell-icon-menu.png" [nzSize]="50"></nz-avatar>
-                  Luyện Tập
-                </a>
-              </li>
-            </ul> 
-          </nz-dropdown-menu>
-        </li>
-        <li nz-menu-item>
-          <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/sword-icon-menu.png" [nzSize]="50"></nz-avatar>
-          Đấu Trường
-        </li>
-        <li nz-menu-item>
-          <a routerLink="/index/store">
-            <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/store-icon-menu.png" [nzSize]="50"></nz-avatar>Cửa Hàng
-          </a>
-        </li>
-        <li nz-menu-item>
-          <a nz-dropdown [nzDropdownMenu]="store">
-            <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/star-gold.png" [nzSize]="50"></nz-avatar>
-            100
-          </a>
-          <nz-dropdown-menu #store="nzDropdownMenu">
-            <ul nz-menu nzSelectable>
-              <li nz-menu-item>
-                <div nz-row nzType="flex" nzJustify="start">
-                  <div nz-col [nzSpan]="9">
-                    <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/gold-chest-icon-menu.png" [nzSize]="50"></nz-avatar>
-                  </div>
-                  <div nz-col [nzSpan]="12">
-                    Vàng <br/>
-                    Bạn có 100 Vàng<br/>
-                    <a routerLink="/index/store">Đến cửa hàng</a>
-                  </div>
-                </div>
-              </li>
-            </ul> 
-          </nz-dropdown-menu>
-        </li>
-        <!-- <li nz-menu-item>
+    <nz-header class="MenuHeader">
+        <!-- <div class="logo"></div> -->
+        <div class="indexMenu">
+            <ul nz-menu nzMode="horizontal" style="width: 105%; height: 64px;">
+                <li nz-menu-item nzSelected class="itemMenu">
+                    <a routerLink="/index/user-profile">
+                        <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/earth-icon-menu.png" [nzSize]="50"></nz-avatar>NameApp
+                    </a>
+                </li>
+                <li nz-menu-item>
+                    <a nz-dropdown [nzDropdownMenu]="exercise">
+                        <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/gradution.png" [nzSize]="50"></nz-avatar>
+                        Học
+                    </a>
+                    <nz-dropdown-menu #exercise="nzDropdownMenu">
+                        <ul nz-menu nzSelectable>
+                            <li nz-menu-item>
+                                <a routerLink="/index/grammar">
+                                    <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/books.png" [nzSize]="50"></nz-avatar>
+                                    Ngữ Pháp
+                                </a>
+                            </li>
+                            <li nz-menu-item>
+                                <a routerLink="/index/exercise">
+                                    <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/dumbbell-icon-menu.png" [nzSize]="50"></nz-avatar>
+                                    Luyện Tập
+                                </a>
+                            </li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </li>
+                <li nz-menu-item>
+                    <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/sword-icon-menu.png" [nzSize]="50"></nz-avatar>
+                    Đấu Trường
+                </li>
+                <li nz-menu-item>
+                    <a routerLink="/index/store">
+                        <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/store-icon-menu.png" [nzSize]="50"></nz-avatar>Cửa Hàng
+                    </a>
+                </li>
+                <li nz-menu-item>
+                    <a nz-dropdown [nzDropdownMenu]="store">
+                        <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/star-gold.png" [nzSize]="50"></nz-avatar>
+                        100
+                    </a>
+                    <nz-dropdown-menu #store="nzDropdownMenu">
+                        <ul nz-menu nzSelectable>
+                            <li nz-menu-item>
+                                <div nz-row nzType="flex" nzJustify="start">
+                                    <div nz-col [nzSpan]="9">
+                                        <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/gold-chest-icon-menu.png" [nzSize]="50"></nz-avatar>
+                                    </div>
+                                    <div nz-col [nzSpan]="12">
+                                        Vàng <br/> Bạn có 100 Vàng<br/>
+                                        <a routerLink="/index/store">Đến cửa hàng</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </li>
+                <!-- <li nz-menu-item>
           <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/pointTotal-icon-menu.png" [nzSize]="50"></nz-avatar>
           500
         </li> -->
-        <li nz-menu-item>
-          <a nz-dropdown [nzDropdownMenu]="avatar">
-            <nz-avatar [nzSize]="50" nzSrc="/assets/images/avatar.png"></nz-avatar>
-          </a>
-          <nz-dropdown-menu #avatar="nzDropdownMenu">
-            <ul nz-menu nzSelectable>
-              <li nz-menu-item><a routerLink="/index/user-profile">Hồ Sơ Của Bạn</a></li>
-              <li nz-menu-item>Cài Đặt</li>
-              <li nz-menu-item>Đăng Xuất</li>
+                <li nz-menu-item>
+                    <a nz-dropdown [nzDropdownMenu]="avatar">
+                        <nz-avatar [nzSize]="50" nzSrc="/assets/images/avatar.png"></nz-avatar>
+                    </a>
+                    <nz-dropdown-menu #avatar="nzDropdownMenu">
+                        <ul nz-menu nzSelectable>
+                            <li nz-menu-item><a routerLink="/index/user-profile">Hồ Sơ Của Bạn</a></li>
+                            <li nz-menu-item>Cài Đặt</li>
+                            <li nz-menu-item>Đăng Xuất</li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </li>
             </ul>
-          </nz-dropdown-menu>
-        </li>
-      </ul>
-    </div>
-  </nz-header>
-  <nz-layout>
-    <nz-layout class="inner-layout">
-      <!-- <div nz-row nzType="flex" nzJustify="start">
+        </div>
+    </nz-header>
+    <nz-layout>
+        <nz-layout class="inner-layout">
+            <!-- <div nz-row nzType="flex" nzJustify="start">
         <div nz-col [nzSpan]="12">
           <nz-form-item>
             <nz-form-control [nzLg]="{span: 3, offset: 0}">
@@ -109,7 +108,7 @@
 
         </div>
       </div>
-      
+
       <div nz-row nzType="flex" nzJustify="start">
         <div nz-col [nzSpan]="12" >
           <nz-form-item>
@@ -137,7 +136,7 @@
           </div>
         </div>
       </div> -->
-      <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
+        </nz-layout>
     </nz-layout>
-  </nz-layout>
 </nz-layout>
