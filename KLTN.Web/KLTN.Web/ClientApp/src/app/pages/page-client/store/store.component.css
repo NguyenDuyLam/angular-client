@@ -11,3 +11,21 @@
 .FormItem {
     width: 80%;
 }
+
+.buttonAdd {
+    bottom: 20px;
+    color: #ff4b4b;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: whitesmoke;
+    font-weight: 600;
+    font-family: sans-serif;
+    opacity: .8;
+    border: 2px groove whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.item {
+    margin-top: -5px;
+}

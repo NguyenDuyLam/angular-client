@@ -1,16 +1,18 @@
 <!-- Thành tích -->
 <div nz-row>
-    <div nz-col [nzSpan]="7" [nzPush]="17">
+    <div nz-col [nzSpan]="8" [nzPush]="16">
         <nz-form-item>
             <nz-form-control [nzLg]="{span: 24, offset: 0}" style="margin-top: -10px;">
-                <nz-card style="width: 100%; border-radius: 16px; border: 2px solid #e5e5e5; border-bottom: 2px solid #e5e5e5;" nzTitle="Tiếng Anh">
+                <nz-card style="width: 100%; border-radius: 16px; border: 2px solid #e5e5e5; border-bottom: 2px solid #e5e5e5;" nzTitle="Thành Tích Tiếp Theo">
                     <h3 style="margin-top: -10px; ">Tổng điểm KN:
                         <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/pointTotal-icon-menu.png" [nzSize]="30"></nz-avatar> 900</h3>
                 </nz-card>
             </nz-form-control>
         </nz-form-item>
     </div>
-    <div nz-col [nzSpan]="17" [nzPull]="7">
+
+
+    <div nz-col [nzSpan]="16" [nzPull]="8">
         <div nz-row nzType="flex" nzJustify="start">
             <div nz-col [nzSpan]="24">
                 <nz-form-item>
@@ -25,19 +27,74 @@
                 <div nz-col [nzSpan]="20">
                     <nz-form-item class="itemControl">
                         <nz-form-control [nzLg]="{span: 3, offset: 0}">
-                            <nz-avatar [nzSize]="70" [nzSrc]="item.image"></nz-avatar>
+                            <nz-avatar [nzSize]="90" [nzSrc]="item.image"></nz-avatar>
                         </nz-form-control>
-                        <nz-form-control [nzLg]="{span: 16, offset: 0}">
-                            <h1>{{item.name}}</h1>
-                            <h3 style="margin-top: -20px;">{{item.descripte}}</h3>
+                        <nz-form-control [nzLg]="{span: 15, offset: 1}">
+                            <h2>{{item.name}}</h2>
+                            <p style="margin-top: -20px;">{{item.descripte}}</p>
                         </nz-form-control>
-                        <nz-form-control [nzLg]="{span: 5, offset: 0}" class="Price">
-                            <button nz-button nzType="primary">MUA VỚI GIÁ: <nz-avatar [nzShape]="'square'"
-                nzSrc="/assets/images/star-gold.png" [nzSize]="25"></nz-avatar>{{item.value}}</button>
+                        <nz-form-control [nzLg]="{span: 4, offset: 0}" class="Price">
+                            <button nz-button nzType="primary" class="buttonAdd">MUA VỚI GIÁ: <nz-avatar [nzShape]="'square'"
+            nzSrc="/assets/images/star-gold.png" [nzSize]="25" class="item"></nz-avatar>{{item.value}}</button>
                         </nz-form-control>
                     </nz-form-item>
                 </div>
             </div>
         </div>
+
+        <div nz-row nzType="flex" nzJustify="start">
+            <div nz-col [nzSpan]="24">
+                <nz-form-item>
+                    <nz-form-control [nzLg]="{span: 12, offset: 0}">
+                        <h1>Luyện Tập</h1>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        </div>
+        <div *ngFor="let item of practices">
+            <div nz-row nzType="flex" nzJustify="start">
+                <div nz-col [nzSpan]="20">
+                    <nz-form-item class="itemControl">
+                        <nz-form-control [nzLg]="{span: 3, offset: 0}">
+                            <nz-avatar [nzSize]="90" [nzSrc]="item.image"></nz-avatar>
+                        </nz-form-control>
+                        <nz-form-control [nzLg]="{span: 15, offset: 1}">
+                            <h2>{{item.name}}</h2>
+                            <p style="margin-top: -20px; font-weight: 300;">{{item.descripte}}</p>
+                        </nz-form-control>
+                        <nz-form-control [nzLg]="{span: 4, offset: 0}" class="Price">
+                            <button nz-button nzType="primary" class="buttonAdd">MUA VỚI GIÁ: <nz-avatar [nzShape]="'square'"
+          nzSrc="/assets/images/star-gold.png" [nzSize]="25" class="item"></nz-avatar>{{item.value}}</button>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+        </div>
+        <div nz-row nzType="flex" nzJustify="start">
+            <div nz-col [nzSpan]="24">
+                <nz-form-item>
+                    <nz-form-control [nzLg]="{span: 21, offset: 0}">
+                        <h2>Lingot là gì?
+                            <nz-avatar [nzShape]="'square'" nzSrc="/assets/images/star-gold.png" [nzSize]="30"></nz-avatar>
+                        </h2>
+                        <span>
+                        <strong>Lingot</strong> là tiền tệ ảo của Duolingo. Bạn càng học nhiều trên Duolingo, bạn càng nhận được nhiều lingot và dùng để mua vật phẩm trong cửa hàng! Một số cách nhận được lingot:
+                      </span>
+                        <table style="width:70%">
+                            <tr>
+                                <th><strong>Thắng cấp</strong></th>
+                                <td> Nhận được <strong>1 lingot</strong> </td>
+                            </tr>
+                            <tr>
+                                <th><strong>Hoàn thành một kỹ năng.</strong></th>
+                                <td> Nhận được <strong>1 lingot</strong> khi hoàn tất một kĩ năng </td>
+                            </tr>
+
+                        </table>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        </div>
     </div>
+
 </div>
